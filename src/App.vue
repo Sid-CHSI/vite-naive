@@ -2,7 +2,7 @@
 import { h, type Component } from "vue";
 import { NIcon, NMenu } from "naive-ui";
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import HelloWorld from "./components/HelloWorld";
 import { NConfigProvider } from "naive-ui";
 import { darkTheme } from "naive-ui";
 import type { MenuOption } from "naive-ui";
@@ -58,15 +58,15 @@ const menuOptions: MenuOption[] = [
       height="125"
     />
 
-    <div class="wrapper">
-      <h1 class="text-3xl font-bold underline">TailwindCSS 標題</h1>
+    <div class="wrapper gap-y-4">
+      <h1 class="text-6xl font-bold">TailwindCSS 標題</h1>
       <HelloWorld msg="You did it!" />
       <n-config-provider :theme="darkTheme">
         <n-menu :options="menuOptions" mode="horizontal" />
       </n-config-provider>
     </div>
   </header>
-  <n-config-provider :theme="darkTheme">
+  <n-config-provider :theme="darkTheme" preflight-style-disabled>
     <RouterView />
   </n-config-provider>
 </template>
