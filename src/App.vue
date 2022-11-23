@@ -59,6 +59,7 @@ const menuOptions: MenuOption[] = [
     />
 
     <div class="wrapper">
+      <h1 class="text-3xl font-bold underline">TailwindCSS 標題</h1>
       <HelloWorld msg="You did it!" />
       <n-config-provider :theme="darkTheme">
         <n-menu :options="menuOptions" mode="horizontal" />

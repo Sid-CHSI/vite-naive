@@ -8,9 +8,10 @@ import "./assets/main.css";
 import "vfonts/Lato.css";
 import "vfonts/FiraCode.css";
 
+const meta = document.createElement("meta");
+meta.name = "naive-ui-style";
+document.head.appendChild(meta);
+
 const app = createApp(App);
 
-app.use(createPinia());
-app.use(router);
-
-app.mount("#app");
+app.use(createPinia()).use(router).mount("#app");
